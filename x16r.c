@@ -85,8 +85,8 @@ void x16r_hash(const char* input, char* output, uint32_t len)
 	int size = len;
 
 	getAlgoString(&input[4], hashOrder);
-
-	for (int i = 0; i < 16; i++)
+	int i;
+	for (i = 0; i < 16; i++)
 	{
 		const char elem = hashOrder[i];
 		const uint8_t algo = elem >= 'A' ? elem - 'A' + 10 : elem - '0';
